@@ -61,7 +61,8 @@ return {
         },
         formatters_by_ft = {
           javascript = { "prettierd", "prettier", "eslint" },
-          typescript = { "prettierd", "prettier", "eslint" }
+          typescript = { "prettierd", "prettier", "eslint" },
+          -- jinja = { "prettier" }
         }
       })
     end

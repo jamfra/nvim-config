@@ -47,6 +47,8 @@ return {
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "gl", vim.diagnostic.open_float, {})
+      vim.keymap.set("n", "ga", vim.lsp.buf.code_action, {})
+      vim.keymap.set("v", "ga", vim.lsp.buf.code_action, {})
     end,
   },
   {

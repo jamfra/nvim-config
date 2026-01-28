@@ -32,13 +32,25 @@ return {
       require("mason-lspconfig").setup()
 
       local capabilities = require('blink.cmp').get_lsp_capabilities()
-      require("lspconfig").lua_ls.setup({ capabilites = capabilities })
-      require("lspconfig").gopls.setup({ capabilites = capabilities })
-      require("lspconfig").templ.setup({ capabilites = capabilities })
-      require("lspconfig").tailwindcss.setup({ capabilities = capabilities })
-      require("lspconfig").ts_ls.setup({ capabilities = capabilities })
+      vim.lsp.config("lua_ls", { capabilities = capabilities })
+      vim.lsp.enable("lua_ls")
 
-      require("lspconfig").jinja_lsp.setup({ capabilities = capabilities })
+      vim.lsp.config("gopls", { capabilities = capabilities })
+      vim.lsp.enable("gopls")
+
+      vim.lsp.config("templ", { capabilities = capabilities })
+      vim.lsp.enable("templ")
+
+      vim.lsp.config("tailwindcss", { capabilities = capabilities })
+      vim.lsp.enable("tailwindcss")
+
+      vim.lsp.config("ts_ls", { capabilities = capabilities })
+      vim.lsp.enable("ts_ls")
+
+      vim.lsp.config("jinja_lsp", { capabilities = capabilities })
+      vim.lsp.enable("jinja_lsp")
+
+      vim.lsp.config("jinja_lsp", { capabilities = capabilities })
       vim.filetype.add {
         extension = {
           njk = 'jinja'

@@ -58,7 +58,10 @@ return {
       }
     },
     keys = {
-      { "<C-_>", function() Snacks.explorer.open() end, desc = "File Explorer" },
+      -- linux
+      { "<C-->", function() Snacks.explorer.open() end, desc = "File Explorer" },
+      -- macos
+      -- { "<C-_", function() Snacks.explorer.open() end, desc = "File Explorer" },
     },
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
   }
